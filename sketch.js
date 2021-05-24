@@ -3,7 +3,7 @@ var pathImg,boyImg,cashImg,diamondsImg,jwelleryImg,swordImg;
 var treasureCollection = 0;
 var cashG,diamondsG,jwelleryG,swordGroup;
 
-//Game States
+//Estados del Juego
 var PLAY=1;
 var END=0;
 var gameState=1;
@@ -21,13 +21,13 @@ function preload(){
 function setup(){
   
   createCanvas(windowWidth,windowHeight);
-// Moving background
+// Fondo en movimiento
 path=createSprite(width/2,200);
 path.addImage(pathImg);
 path.velocityY = 4;
 
 
-//creating boy running
+//ccrea al niño corriendo
 boy = createSprite(width/2,height-20,20,20);
 boy.addAnimation("SahilRunning",boyImg);
 boy.scale=0.08;
@@ -49,7 +49,7 @@ function draw() {
   edges= createEdgeSprites();
   boy.collide(edges);
   
-  //code to reset the background
+  //código para reiniciar el fondo
   if(path.y > height ){
     path.y = height/2;
   }
@@ -96,7 +96,7 @@ function draw() {
   drawSprites();
   textSize(20);
   fill(255);
-  text("Treasure: "+ treasureCollection,width-150,30);
+  text("Tesoro: "+ treasureCollection,width-150,30);
   }
 
 }
